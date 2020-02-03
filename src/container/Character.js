@@ -12,6 +12,9 @@ export default class Characters extends Component {
       this.fetchCharacter();
     }
 
+    updateCharacter = () => {
+      this.setState(this.fetchCharacter());
+    }
 
 
     fetchCharacter = () => {
@@ -23,7 +26,7 @@ export default class Characters extends Component {
       const { image, name } = this.state;
       return (
         <>
-          <button>New Character</button>
+          <button onClick={this.updateCharacter}>New Character</button>
           <Character image={image} name={name}/>
         </>
       );
