@@ -4,7 +4,7 @@ export const getCharacter = () => {
   return fetch(`https://rickandmortyapi.com/api/character/${randomNum}`)
     .then(res => res.json())
     .then(({ image, name }) => ({
-      image: image,
-      name: name
+      image,
+      name
     }));
 };
